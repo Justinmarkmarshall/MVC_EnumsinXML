@@ -12,6 +12,8 @@ namespace SerializationDemo.Models
 
     public enum ApplicationLicenseState
     {
+        //this will allow the xml response to show the number aswell
+        // without this it will show the string value
         [XmlEnum("0")]
         Valid = 0,
         [XmlEnum("1")]
