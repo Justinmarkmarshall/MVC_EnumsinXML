@@ -14,8 +14,8 @@ spec:
         app: serdemo
     spec:
       containers:
-      - name: ser-demo
-        image: ser_demo
+      - name: ser-demo-gitbash
+        image: serdemo_gitbash
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
