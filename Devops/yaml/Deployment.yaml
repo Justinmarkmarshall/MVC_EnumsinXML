@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serdemo
+  namespace: serdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serdemo
+  template:
+    metadata:
+      labels:
+        app: serdemo
+    spec:
+      containers:
+      - name: ser-demo
+        image: ser_demo
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+
+# deployments deploy pods, so this will create a pod

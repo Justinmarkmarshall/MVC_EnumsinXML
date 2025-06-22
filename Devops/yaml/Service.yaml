@@ -1,0 +1,17 @@
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: serdemo
+      labels:
+        app: serdemo
+    spec:
+      selector:
+        app: serdemo
+        version: v1
+      ports:
+        - protocol: TCP
+          port: 8080
+          targetPort: 8080
+      type: NodePort
+      externalTrafficPolicy: Cluster
+      sessionAffinity: None
